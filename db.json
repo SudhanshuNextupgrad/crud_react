@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "sudhanshu lala",
+      "email": "sudhanshu@gmail.com",
+      "phno": "1234567890",
+      "address": "Lucknow"
+    },
+    {
+      "id": "2",
+      "name": "Satyam dada",
+      "email": "satyam@gmail.com",
+      "phno": "1234567890",
+      "address": "Hardoi"
+    },
+    {
+      "id": "7",
+      "name": "sonu bhai",
+      "email": "sonubhaiya@gmail.com",
+      "phno": "1234554321",
+      "address": "barelly"
+    },
+    {
+      "id": "8",
+      "name": "Pankaj",
+      "email": "pankaj@gmail.com",
+      "phno": "0987654321",
+      "address": "Badaun"
+    },
+    {
+      "id": "9",
+      "name": "Santosh",
+      "email": "santosh@gmail.com",
+      "phno": "1234432112",
+      "address": "Kaushambhi"
+    }
+  ]
+}
