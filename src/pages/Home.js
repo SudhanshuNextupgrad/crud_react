@@ -17,8 +17,9 @@ const Home = () => {
     const navigate = useNavigate();
 
     const getData = async () => {
-        const resp = await fetch(process.env.LOCAL_URL + '/users')
+        const resp = await fetch( 'http://localhost:3030/users')
         const data = await resp.json();
+        console.log("check resp",data)
         setUserdata(data)
     }
     useEffect(() => {
@@ -26,7 +27,7 @@ const Home = () => {
     }, [refresh])
 
     const deleteData = async (id) => {
-        const resp = await axios.delete(process.env.LOCAL_URL +`/users/${id}`);
+        const resp = await axios.delete(`http://localhost:3030/users/${id}`);
         
         resp.status==200 ? toast.success("User Deleted successfully") : toast.error("Error")
         setRefresh(Math.random);

@@ -2,16 +2,10 @@ import React, { useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Create_user from "./pages/Create_user";
-import Delete_user from "./pages/Delete_user";
-import Update_user from "./pages/Update_user";
-import Error from "./pages/Error";
-
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import axios from "axios";
 
 
@@ -23,7 +17,7 @@ function App() {
 
   const searchList = async (name) => {
     setDisplay("d-block")
-    const resp = await axios.get(process.env.LOCAL_URL + '/users');
+    const resp = await axios.get('http://localhost:3030/users');
 
     const fullList = resp.data;
     const filterName = [];
