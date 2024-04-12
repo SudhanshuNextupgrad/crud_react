@@ -3,28 +3,28 @@
   "users": [
     {
       "id": "1",
-      "name": "sudhanshu lala",
+      "name": "Sudhanshu Srivastava",
       "email": "sudhanshu@gmail.com",
       "phno": "1234567890",
       "address": "Lucknow"
     },
     {
       "id": "7",
-      "name": "sonu bhai",
-      "email": "sonubhaiya@gmail.com",
+      "name": "Piyush Verma",
+      "email": "Piyush@gmail.com",
       "phno": "1234554321",
-      "address": "barelly"
+      "address": "Kanpur"
     },
     {
       "id": "8",
-      "name": "Pankaj",
+      "name": "Pankaj Singh",
       "email": "pankaj@gmail.com",
       "phno": "0987654321",
-      "address": "Badaun"
+      "address": "Barabanki"
     },
     {
       "id": "9",
-      "name": "Santosh",
+      "name": "Santosh Kumar",
       "email": "santosh@gmail.com",
       "phno": "1234432112",
       "address": "Kaushambhi"
@@ -35,6 +35,20 @@
       "email": "agam@gmail.com",
       "phno": "1234567890",
       "address": "Lucknow"
+    },
+    {
+      "id": "11",
+      "name": "Arjit Srivastava",
+      "email": "arjit@gmail.com",
+      "phno": "1234567890",
+      "address": "Pratapgarh"
+    },
+    {
+      "id": "12",
+      "name": "Nikhil",
+      "email": "nikhil@gmail.com",
+      "phno": "3213213211",
+      "address": "Hardoi"
     }
   ]
 }

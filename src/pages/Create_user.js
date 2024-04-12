@@ -32,7 +32,7 @@ const Create_user = () => {
 
     const getUpdateData = async (id) => {
        
-        const resp = await axios.get('http://localhost:3030/users/' + id)
+        const resp = await axios.get(process.env.LOCAL_URL + '/users/' + id)
         
         setAddress(resp.data.address);
         setEmail(resp.data.email);
@@ -59,7 +59,7 @@ const Create_user = () => {
                 phno: phno,
                 address: address,
             }
-            const resp = await axios.put('http://localhost:3030/users/' + id, newData);
+            const resp = await axios.put(process.env.LOCAL_URL + '/users/' + id, newData);
            
             resp.status == 200 ? toast.success("User updated") : toast.error("Error!");
             setTimeout(() => navigate('/'), 3000)
@@ -72,7 +72,7 @@ const Create_user = () => {
         e.preventDefault();
 
         let lastId = 0;
-        const getresp = await axios.get('http://localhost:3030/users')
+        const getresp = await axios.get(process.env.LOCAL_URL+'/users')
 
 
         getresp.data.map((item) => {
@@ -89,7 +89,7 @@ const Create_user = () => {
         } else if (address == '') {
             toast.error("Please fill address correctly!")
         } else {
-            const resp = await axios.post('http://localhost:3030/users', {
+            const resp = await axios.post(process.env.LOCAL_URL + '/users', {
                 id: (parseInt(lastId) + 1).toString(),
                 name: name,
                 email: email,
