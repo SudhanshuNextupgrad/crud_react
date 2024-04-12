@@ -13,13 +13,13 @@ import axios from 'axios';
 
 const Home = () => {
     const [userData, setUserdata] = useState([])
-    const [refresh,setRefresh] = useState('')
+    const [refresh, setRefresh] = useState('')
     const navigate = useNavigate();
 
     const getData = async () => {
-        const resp = await fetch( 'http://localhost:3030/users')
+        const resp = await fetch('http://localhost:3030/users')
         const data = await resp.json();
-        console.log("check resp",data)
+        console.log("check resp", data)
         setUserdata(data)
     }
     useEffect(() => {
@@ -28,15 +28,15 @@ const Home = () => {
 
     const deleteData = async (id) => {
         const resp = await axios.delete(`http://localhost:3030/users/${id}`);
-        
-        resp.status==200 ? toast.success("User Deleted successfully") : toast.error("Error")
+
+        resp.status == 200 ? toast.success("User Deleted successfully") : toast.error("Error")
         setRefresh(Math.random);
     }
 
-    
+
     return (
         <div className='container'>
-             <ToastContainer
+            <ToastContainer
                 position="top-center"
                 autoClose={2000}
                 theme='colored'
@@ -67,7 +67,7 @@ const Home = () => {
                         <tbody>
                             {userData.map((item, index) => (
                                 <tr key={index}>
-                                    <td>{index+1}</td>
+                                    <td>{index + 1}</td>
                                     <td>{item.name}</td>
                                     <td>{item.email}</td>
                                     <td>{item.phno}</td>
@@ -75,7 +75,15 @@ const Home = () => {
                                     <td><Button variant="warning" size="sm" onClick={() => navigate(`/Create_user/${item.id}`)}>Update</Button>{' '}</td>
                                     <td> <Button variant="danger" size="sm" onClick={() => deleteData(item.id)}>Delete</Button>{' '}</td>
                                 </tr>))}
-                           
+                            <tr >
+                                <td>1</td>
+                                <td>Sudhanshu Srivastava</td>
+                                <td>sudhanshu@gmail.com</td>
+                                <td>1234567890</td>
+                                <td>Hardoi</td>
+                                <td><Button variant="warning" size="sm" >Update</Button>{' '}</td>
+                                <td> <Button variant="danger" size="sm" >Delete</Button>{' '}</td>
+                            </tr>
                         </tbody>
                     </Table>
                 </div>

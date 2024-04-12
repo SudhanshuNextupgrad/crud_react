@@ -49,6 +49,13 @@
       "email": "nikhil@gmail.com",
       "phno": "3213213211",
       "address": "Hardoi"
+    },
+    {
+      "id": "13",
+      "name": "Manoj kumar",
+      "email": "manoj@gmail.com",
+      "phno": "1231231231",
+      "address": "Varanasi"
     }
   ]
 }
